@@ -1,4 +1,6 @@
 import Helmet from 'react-helmet'
+import Markdown from 'react-markdown';
+import Works from './works';
 
 export default () => (
   <div>
@@ -24,10 +26,7 @@ export default () => (
 
     <h1>gmork.in</h1>
 
-    <section>
-      <h2>Works</h2>
-      TBD
-    </section>
+    <Works/>
 
   </div>
 )
