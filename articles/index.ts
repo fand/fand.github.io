@@ -1,28 +1,14 @@
-import * as fm from "front-matter";
-import * as Markdown from "react-markdown";
-
-class Article {
-    body: string;
-    opts: any;
-    date: Date;
-
-    constructor(text) {
-        const parsed = fm(text);
-        this.body = parsed.body;
-        this.opts = parsed.attributes;
-        this.date = new Date(this.opts.date || new Date());
-    }
-
-    get title(): string {
-        return this.body.split("\n")[0].replace(/#+/, "").trim();
-    }
-
-    get description(): string {
-        return this.body.split("\n").slice(1).join("").trim();
-    }
-}
+import Article from '../src/models/article';
 
 export default [
     new Article(require("./glsl-livecoder.md")),
-    new Article(require("./evil.md"))
+    new Article(require("./evil.md")),
+    new Article(require("./lolipop.md")),
+    new Article(require("./guitarbreaks.md")),
+    new Article(require("./cyro.md")),
+    new Article(require("./mokugyo-clicker.md")),
+    new Article(require("./rvd.md")),
+    new Article(require("./glitch-you.md")),
+    new Article(require("./bake.md")),
+    new Article(require("./contraster.md")),
 ];

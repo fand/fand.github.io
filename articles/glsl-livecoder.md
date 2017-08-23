@@ -1,4 +1,5 @@
 ---
+id: glsl-livecoder
 url: https://atom.io/packages/glsl-livecoder
 github: https://github.com/fand/glsl-livecoder
 thumbnail: /static/thumbnails/glsl-livecoder.png

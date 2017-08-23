@@ -3,18 +3,18 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    bundle: './src/index.tsx',
+    bundle: './src/index.js',
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, '.'),
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.md'],
+    extensions: ['.js', '.md'],
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.js?$/, loader: 'babel-loader' },
       { test: /\.(glsl|frag|vert)$/, loader: 'raw-loader', exclude: /node_modules/ },
       { test: /\.(glsl|frag|vert)$/, loader: 'glslify-loader', exclude: /node_modules/ },
       { test: /\.md$/, loader: 'raw-loader' },
