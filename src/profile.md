@@ -168,7 +168,17 @@ CLI client for [Irasutoya (いらすとや)](http://www.irasutoya.com/).
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/glsl2img)
 
-Render png / animated GIF for GLSL fragment shader.
+Renders png / animated GIF for GLSL fragment shader.
+
+
+#### Clonepool
+
+[![](/images/clonepool.png)](https://gmork.in/clonepool)
+
+[<i class="fa fa-github"></i> GitHub](https://github.com/fand/clonepool)
+
+Git utility designed for Scala.
+Its website is built Scala.js, React and ScalaCSS.
 
 
 #### circle-text
