@@ -1,5 +1,4 @@
 import React from 'react';
-import Markdown from 'react-markdown';
 import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
 
@@ -23,28 +22,38 @@ injectGlobal`
 
 const Wrapper = styled.section`
   width: 640px;
-  max-width: 80%;
+  max-width: 90%;
   margin: 20px auto;
   line-height: 2em;
   font-family: serif;
   text-align: center;
 
   .vertigo {
-    width: 120px;
+    width: 180px;
     margin: 50px;
   }
 
-  img {
-    max-width: 420px;
+  img, iframe {
+    width: 420px;
+    max-width: 100%;
     max-height: 360px;
   }
 
-  ul {
-    padding: 0 20px;
-    width: 200px;
-    margin: auto;
-    text-align: left;
-    list-style: none;
+  p {
+    margin: 1em auto;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+
+  a, a:visited {
+    color: #059;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.5;
+    text-decoration: underline;
   }
 
   h1, h2 {
@@ -55,10 +64,24 @@ const Wrapper = styled.section`
     margin: 30px auto 30px;
   }
   h2 {
-    margin: 90px auto 30px;
+    margin: 90px auto 40px;
+    &:before, &:after {
+      color: #999;
+      content: '――――';
+      letter-spacing: -0.2em;
+      margin: 0 20px 0 10px;
+    }
   }
   h3 {
-    margin: 40px auto 20px;
+    margin: 60px auto 20px;
+    font-size: 1.17em;
+  }
+  h4 {
+    margin: 80px auto 20px;
+    font-size: 1.12em;
+  }
+  h3 + h4 {
+    margin-top: 20px;
   }
 `;
 
