@@ -23,14 +23,17 @@ vec2 rotate(in vec2 v, in float a) {
     return m * v;
 }
 
-void main( void ) {
-    vec2 p = (gl_FragCoord.xy * 2. - resolution) / min(resolution.x, resolution.y);
+vec3 dia(in vec2 p) {
     p = p * (length(mouse - vec2(.5)) + scroll);
 
     float r = random(vec2(floor((abs(p.x) + abs(p.y)) * 8. - mod(time + scroll * 100., 20.))));
     float r2 = random(vec2(r));
     vec2 f = vec2(r, r2) * 2. - 1.;
-    vec3 color = texture2D(image, abs(p + f * sin(time * .2)) * r).rgb * 2.;
 
-    gl_FragColor = vec4(color, 1.0);
+    return texture2D(image, abs(p + f * sin(time * .2)) * r).rgb * 2.;
+}
+
+void main(void) {
+    vec2 p = (gl_FragCoord.xy * 2. - resolution) / min(resolution.x, resolution.y);
+    gl_FragColor = vec4(dia(p), 1.0);
 }
