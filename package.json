@@ -6,6 +6,7 @@
   "author": "fand <fand@gmork.in>",
   "license": "MIT",
   "dependencies": {
+    "is-video": "^1.0.1",
     "jump.js": "^1.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

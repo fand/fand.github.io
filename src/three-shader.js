@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import VideoLoader from './video-loader';
+import isVideo from 'is-video';
 
 const DEFAULT_VERTEX_SHADER = `
 void main() {
@@ -43,6 +44,8 @@ export default class ThreeShader {
     };
 
     this._textureLoader = new THREE.TextureLoader();
+
+    this._callbacks = [];
   }
 
   setPixelRatio(pixelRatio) {
@@ -109,6 +112,14 @@ export default class ThreeShader {
     }
   }
 
+  addUniform(name, callback) {
+    this._uniforms[name] = {
+        type: 'f',
+        value: callback(),
+    };
+    this._callbacks[name] = callback;
+  }
+
   mousemove = (e: MouseEvent) => {
     this._uniforms.mouse.value.x = e.clientX / window.innerWidth;
     this._uniforms.mouse.value.y = 1 - e.clientY / window.innerHeight;
@@ -147,6 +158,10 @@ export default class ThreeShader {
     this._uniforms.time.value = (Date.now() - this._start) / 1000;
     this._targets = [this._targets[1], this._targets[0]];
     this._uniforms.backbuffer.value = this._targets[0].texture;
+
+    Object.keys(this._callbacks).forEach((name) => {
+      this._uniforms[name].value = this._callbacks[name]();
+    });
 
     this._renderer.render(this._scene, this._camera);
     this._renderer.render(this._scene, this._camera, this._targets[1], true);
