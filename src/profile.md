@@ -1,4 +1,4 @@
-<img class="vertigo" src="/images/vertigo.png" width="320"/>
+<img class="vertigo" src="/images/vertigo.png"/>
 
 # Takayosi Amagi
 [Profile](#profile) / [Works](#works) / [Media](#media)
@@ -226,10 +226,3 @@ I'm the organizer of [Kyoto.js](https://kyoto.js.org/).
 See connpass for past events.
 
 https://kyotojs.connpass.com/
-
-
-<!-- footer -->
-<br><br><br>
-<img class="vertigo" src="/images/vertigo.png" width="120"/>
-[gmork.in](https://gmork.in/)
-<br><br><br><br><br><br>

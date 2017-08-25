@@ -1,22 +1,15 @@
 import React from 'react';
 import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
+import Shader from './shader';
 
 const profile = require('./profile.md');
 
 injectGlobal`
-  @keyframes blink {
-    0%   { background: hsl(210, 9%, 93%); }
-    17%  { background: hsl(180, 3%, 93%); }
-    31%  { background: hsl(199, 7%, 93%); }
-    47%  { background: hsl(230, 3%, 93%); }
-    63%  { background: hsl(210, 1%, 93%); }
-    79%  { background: hsl(180, 9%, 93%); }
-    91%  { background: hsl(230, 7%, 93%); }
-    100% { background: hsl(190, 1%, 93%); }
-  }
   body {
-    animation: blink 3s linear 0s infinite;
+    line-height: 2em;
+    font-family: serif;
+    text-align: center;
   }
 `;
 
@@ -24,12 +17,10 @@ const Wrapper = styled.section`
   width: 640px;
   max-width: 90%;
   margin: 20px auto;
-  line-height: 2em;
-  font-family: serif;
-  text-align: center;
 
   .vertigo {
     width: 180px;
+    height: 180px;
     margin: 50px;
   }
 
@@ -85,6 +76,26 @@ const Wrapper = styled.section`
   }
 `;
 
+const Footer = styled.footer`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+  }
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80px);
+  }
+`;
+
 marked.setOptions({
   gfm: true,
   breaks: true,
@@ -93,8 +104,13 @@ const innerHtml = { __html: marked(profile) }
 
 export default () => (
   <div>
+    <Shader/>
     <Wrapper>
       <div dangerouslySetInnerHTML={innerHtml}/>
     </Wrapper>
+    <Footer>
+      <img src="/images/vertigo.png" width="120"/>
+      <a href="/">gmork.in</a>
+    </Footer>
   </div>
 );
