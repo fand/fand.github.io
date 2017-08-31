@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const DEV = process.env.NODE_ENV !== 'production';
+
 module.exports = {
   entry: {
     bundle: './src/index.js',
@@ -22,13 +24,19 @@ module.exports = {
       { test: /\.(mp3|mp4|wav)$/i, loader: 'file-loader?name=sounds/[name].[ext]' },
     ],
   },
-  devtool: 'cheap-eval-source-map',
+  devtool: DEV ? 'cheap-eval-source-map' : 'source-map',
   devServer: {
     contentBase: path.join(__dirname, '.'),
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false,
+      }
     }),
   ],
 };
