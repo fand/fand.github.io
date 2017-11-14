@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "precommit": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -25,6 +26,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "glslify-loader": "^1.0.2",
+    "husky": "^0.14.3",
     "marked": "^0.3.6",
     "npm-run-all": "^4.0.2",
     "raw-loader": "^0.5.1",
