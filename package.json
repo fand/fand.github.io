@@ -8,6 +8,7 @@
   "dependencies": {
     "is-video": "^1.0.1",
     "jump.js": "^1.0.2",
+    "lozad": "^1.0.9",
     "next": "^4.1.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -24,8 +25,8 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-inline-import-loader": "^0.0.5",
-    "babel-plugin-inline-import": "^2.0.6",
     "babel-loader": "^7.1.2",
+    "babel-plugin-inline-import": "^2.0.6",
     "babel-preset-env": "^1.6.0",
     "husky": "^0.14.3",
     "marked": "^0.3.6"

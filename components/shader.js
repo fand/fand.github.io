@@ -30,14 +30,18 @@ export default class Shader extends React.Component {
   }
 
   componentDidMount() {
-    if (window) { return; }
+    if (!window) { return; }
 
     const Veda = require('vedajs');
+
     this.veda = new Veda();
     this.veda.setCanvas(this.canvas);
-    this.veda.loadTexture('image', '/static/images/kii.png');
-    this.veda.loadShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
-    this.veda.addUniform('scroll', this.getScroll);
+    console.log(this.veda, this.canvas, shaderPc);
+    // this.veda.loadTexture('image', '/static/images/kii.png');
+    this.veda.loadFragmentShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
+    // this.veda.setUniform('scroll', this.getScroll());
+
+console.log('>>>>>>>>>>');
     this.veda.play();
 
     this.update();
