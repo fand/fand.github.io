@@ -96,11 +96,21 @@ const Footer = styled.footer`
   }
 `;
 
+const renderer = new marked.Renderer();
+renderer.image = function(href, title, text) {
+  var out = '<img class="lozad" data-src="' + href + '" alt="' + text + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += this.options.xhtml ? '/>' : '>';
+  return out;
+};
+
 marked.setOptions({
   gfm: true,
   breaks: true,
 });
-const innerHtml = { __html: marked(profile) }
+const innerHtml = { __html: marked(profile, { renderer }) }
 
 export default () => (
   <div>
