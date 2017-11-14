@@ -10,6 +10,11 @@ injectGlobal`
   }
 `;
 
+const Wrapper  = styled.div`
+  background: #fff;
+  opacity: 1;
+`;
+
 const Canvas = styled.canvas`
   position: fixed;
   top: 0;
@@ -33,22 +38,18 @@ export default class Shader extends React.Component {
     if (!window) { return; }
 
     const Veda = require('vedajs');
-
     this.veda = new Veda();
     this.veda.setCanvas(this.canvas);
-    console.log(this.veda, this.canvas, shaderPc);
-    // this.veda.loadTexture('image', '/static/images/kii.png');
+    this.veda.loadTexture('image', '/static/images/kii.png');
     this.veda.loadFragmentShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
-    // this.veda.setUniform('scroll', this.getScroll());
-
-console.log('>>>>>>>>>>');
+    this.veda.setUniform('scroll', 'f', this.getScroll());
     this.veda.play();
 
     this.update();
   }
 
   update = (e) => {
-    this.veda.setUniform('scroll', this.getScroll());
+    this.veda.setUniform('scroll', 'f', this.getScroll());
     requestAnimationFrame(this.update);
   }
 
@@ -61,9 +62,9 @@ console.log('>>>>>>>>>>');
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <Canvas innerRef={this.setCanvas}/>
-      </div>
+      </Wrapper>
     );
   }
 }
