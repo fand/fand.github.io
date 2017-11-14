@@ -3,7 +3,7 @@ import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
 import Shader from './shader';
 
-const profile = require('./profile.md');
+import profile from './profile.md';
 
 injectGlobal`
   body {
@@ -119,8 +119,9 @@ export default () => (
       <div dangerouslySetInnerHTML={innerHtml}/>
     </Wrapper>
     <Footer>
-      <img src="/images/vertigo.png" width="120"/>
+      <img src="/static/images/vertigo.png" width="120"/>
       <a href="/">gmork.in</a>
     </Footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   </div>
 );

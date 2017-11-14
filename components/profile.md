@@ -1,4 +1,4 @@
-<img class="vertigo" src="/images/vertigo.png"/>
+<img class="vertigo" src="/static/images/vertigo.png"/>
 
 # Takayosi Amagi
 [Profile](#profile) / [Works](#works) / [Media](#media)
@@ -37,7 +37,7 @@ It also supports webcam inputs, events from keyboard, and gamepads.
 
 #### evil
 
-[![](/images/t_evil.png)](https://evil.gmork.in/)
+[![](/static/images/t_evil.png)](https://evil.gmork.in/)
 
 https://evil.gmork.in/
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/evil)
@@ -50,7 +50,7 @@ Built with Web Audio API.
 
 #### Lolipop
 
-[![](/images/lolipop.png)](https://github.com/fand/lolipop)
+[![](/static/images/lolipop.png)](https://github.com/fand/lolipop)
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/lolipop)
 
 Music player for "lolicore" lovers.
@@ -82,7 +82,7 @@ Built with Mithril.js, Web Audio API and Gamepad API.
 
 #### RVD
 
-[![](/images/rvd.gif)](https://gmork.in/RVD)
+[![](/static/images/rvd.gif)](https://gmork.in/RVD)
 
 https://gmork.in/RVD
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/RVD)
@@ -98,7 +98,7 @@ Built with React + Flux.
 
 #### Mokugyo Clicker
 
-[![](/images/t_mokugyo.png)](https://gmork.in/mokugyo)
+[![](/static/images/t_mokugyo.png)](https://gmork.in/mokugyo)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/mokugyo)
 
@@ -107,7 +107,7 @@ A parody of [CookieClicker](http://orteil.dashnet.org/cookieclicker/).
 
 #### Random Font Generator
 
-![](/images/t_font.png)
+![](/static/images/t_font.png)
 
 Glitched SVG Web Font Generator.
 Unavailable now (SVG font is deprecated).
@@ -115,7 +115,7 @@ Unavailable now (SVG font is deprecated).
 
 #### Contraster
 
-[![](/images/contraster.png)](https://gmork.in/contraster)
+[![](/static/images/contraster.png)](https://gmork.in/contraster)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/contraster)
 
@@ -126,7 +126,7 @@ Built with AngularJS.
 
 #### glitch you
 
-[![](/images/t_glitch.png)](https://gmork.in/glitchyou)
+[![](/static/images/t_glitch.png)](https://gmork.in/glitchyou)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/glitchyou)
 
@@ -135,7 +135,7 @@ Detect faces in images and glitch 'em randomly.
 
 #### Bakemonogatari Logo Generator
 
-[![](/images/t_bake.png)](https://gmork.in/bake)
+[![](/static/images/t_bake.png)](https://gmork.in/bake)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/bake)
 
@@ -173,7 +173,7 @@ Renders png / animated GIF for GLSL fragment shader.
 
 #### Clonepool
 
-[![](/images/clonepool.png)](https://gmork.in/clonepool)
+[![](/static/images/clonepool.png)](https://gmork.in/clonepool)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/clonepool)
 
@@ -205,7 +205,7 @@ Medium: [@amagitakayosi](https://medium.com/@amagitakayosi)
 
 ### WebGL Study
 
-[![](/images/webgl_study.png)](https://gmork.in/webgl-study/)
+[![](/static/images/webgl_study.png)](https://gmork.in/webgl-study/)
 
 Studies of WebGL / GLSL.
 Built with TypeScript, React and Three.js.
@@ -213,14 +213,14 @@ Built with TypeScript, React and Three.js.
 
 ### Slides
 
-[![](/images/slides.png)](https://speakerdeck.com/fand)
+[![](/static/images/slides.png)](https://speakerdeck.com/fand)
 
 See [SpeakerDeck](https://speakerdeck.com/fand).
 
 
 ### Events
 
-[![](/images/kyotojs.png)](https://kyoto.js.org/)
+[![](/static/images/kyotojs.png)](https://kyoto.js.org/)
 
 I'm the organizer of [Kyoto.js](https://kyoto.js.org/).
 See connpass for past events.
