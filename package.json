@@ -17,8 +17,8 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export -o docs && mv docs/* . && rm -rf docs",
-    "precommit": "npm run build"
+    "build": "next build && next export -o docs && rm -rf .next _next && mv docs/* . && rm -rf docs",
+    "precommit": "npm run build && git add ."
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
