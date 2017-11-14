@@ -1,9 +1,4 @@
 {
-    "presets": [
-        "react",
-        ["env", {
-            "targets": { "browsers": ["last 2 versions"] }
-        }],
-        "stage-2",
-    ]
+    "presets": ["next/babel"],
+    "plugins": [["inline-import", { "extensions": [".md", ".frag", ".vert"] }]],
 }
