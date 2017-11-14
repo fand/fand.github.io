@@ -147,7 +147,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/_next/d3a37979-c0ae-4e0b-bb86-0a998e4ad185/webpack/";
+/******/ 	__webpack_require__.p = "/_next/cc0eae04-ff38-4a40-acf8-d1afe91a3a85/webpack/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -55800,7 +55800,7 @@ var MyDocument = function (_Document) {
   (0, _createClass3.default)(MyDocument, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('html', null, _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'My page'), this.props.styleTags), _react2.default.createElement('body', null, _react2.default.createElement(_document.Main, null), _react2.default.createElement(_document.NextScript, null)));
+      return _react2.default.createElement('html', null, _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'gmork.in'), _react2.default.createElement('meta', { charSet: 'utf-8' }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }), _react2.default.createElement('meta', { name: 'twitter:card', content: 'summary' }), _react2.default.createElement('meta', { name: 'twitter:site', content: '@amagitakayosi' }), _react2.default.createElement('meta', { property: 'og:title', content: 'gmork.in' }), _react2.default.createElement('meta', { property: 'og:type', content: 'website' }), _react2.default.createElement('meta', { property: 'og:url', content: 'https://gmork.in/' }), _react2.default.createElement('meta', { property: 'og:image', content: '/static/images/vertigo.png' }), _react2.default.createElement('meta', { property: 'og:description', content: 'Portfolio of @amagitakayosi' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/static/images/favicon/apple-icon-57x57.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '60x60', href: '/static/images/favicon/apple-icon-60x60.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '72x72', href: '/static/images/favicon/apple-icon-72x72.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '76x76', href: '/static/images/favicon/apple-icon-76x76.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '114x114', href: '/static/images/favicon/apple-icon-114x114.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '120x120', href: '/static/images/favicon/apple-icon-120x120.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '144x144', href: '/static/images/favicon/apple-icon-144x144.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '152x152', href: '/static/images/favicon/apple-icon-152x152.png' }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/static/images/favicon/apple-icon-180x180.png' }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/static/images/favicon/android-icon-192x192.png' }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/static/images/favicon/favicon-32x32.png' }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/static/images/favicon/favicon-96x96.png' }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/static/images/favicon/favicon-16x16.png' }), _react2.default.createElement('link', { rel: 'manifest', href: '/manifest.json' }), _react2.default.createElement('meta', { name: 'msapplication-TileColor', content: '#ffffff' }), _react2.default.createElement('meta', { name: 'msapplication-TileImage', content: '/static/images/favicon/ms-icon-144x144.png' }), _react2.default.createElement('meta', { name: 'theme-color', content: '#ffffff' }), this.props.styleTags, _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css' })), _react2.default.createElement('body', null, _react2.default.createElement(_document.Main, null), _react2.default.createElement(_document.NextScript, null), _react2.default.createElement('script', { src: 'https://use.fontawesome.com/9f93baf7cc.js' }), _react2.default.createElement('script', { dangerouslySetInnerHTML: { __html: '\n            !function(g,m,o,r,k){g.GoogleAnalyticsObject=o;g[o]||(g[o]=function(){\n            (g[o].q=g[o].q||[]).push(arguments)});g[o].l=+new Date;r=m.createElement(\'script\');\n            k=m.scripts[0];r.src=\'//www.google-analytics.com/analytics.js\';\n            k.parentNode.insertBefore(r,k)}(window,document,\'ga\');\n                      ga(\'create\', \'UA-41787635-13\', \'auto\');\n            ga(\'send\', \'pageview\');\n          ' } })));
     }
   }], [{
     key: 'getInitialProps',
@@ -60224,7 +60224,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  @keyframes disolve {\n    from { opacity: 0; }\n    to   { opacity: .5; }\n  }\n'], ['\n  @keyframes disolve {\n    from { opacity: 0; }\n    to   { opacity: .5; }\n  }\n']),
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  @keyframes disolve {\n    from { opacity: 0; }\n    to   { opacity: .5; }\n  }\n  video {\n    display: none !important;\n  }\n'], ['\n  @keyframes disolve {\n    from { opacity: 0; }\n    to   { opacity: .5; }\n  }\n  video {\n    display: none !important;\n  }\n']),
     _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  background: #fff;\n  opacity: 1;\n'], ['\n  background: #fff;\n  opacity: 1;\n']),
     _templateObject3 = (0, _taggedTemplateLiteral3.default)(['\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  z-index: -2;\n  opacity: 0;\n  animation: disolve 3s linear 1s 1;\n  animation-fill-mode: forwards;\n  background: #fff;\n'], ['\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  z-index: -2;\n  opacity: 0;\n  animation: disolve 3s linear 1s 1;\n  animation-fill-mode: forwards;\n  background: #fff;\n']);
 
@@ -60240,29 +60240,28 @@ var Canvas = _styledComponents2.default.canvas(_templateObject3);
 var Shader = function (_React$Component) {
   (0, _inherits3.default)(Shader, _React$Component);
 
-  function Shader(props) {
+  function Shader() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     (0, _classCallCheck3.default)(this, Shader);
 
-    var _this = (0, _possibleConstructorReturn3.default)(this, (Shader.__proto__ || (0, _getPrototypeOf2.default)(Shader)).call(this, props));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-    _this.update = function (e) {
-      _this.veda.setUniform('scroll', 'f', _this.getScroll());
-      requestAnimationFrame(_this.update);
-    };
-
-    _this.getScroll = function () {
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Shader.__proto__ || (0, _getPrototypeOf2.default)(Shader)).call.apply(_ref, [this].concat(args))), _this), _this.resize = function () {
+      _this.veda.resize(window.innerWidth, window.innerHeight);
+    }, _this.scroll = function () {
       if (!window) {
         return 0;
       }
-      return window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    };
-
-    _this.setCanvas = function (el) {
+      var scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      _this.veda.setUniform('scroll', 'f', scroll);
+    }, _this.setCanvas = function (el) {
       return _this.canvas = el;
-    };
-
-    _this.scroll = 0;
-    return _this;
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
   (0, _createClass3.default)(Shader, [{
@@ -60277,10 +60276,13 @@ var Shader = function (_React$Component) {
       this.veda.setCanvas(this.canvas);
       this.veda.loadTexture('image', '/static/images/kii.png');
       this.veda.loadFragmentShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
-      this.veda.setUniform('scroll', 'f', this.getScroll());
-      this.veda.play();
 
-      this.update();
+      this.resize();
+      this.scroll();
+      window.addEventListener('resize', this.resize);
+      window.addEventListener('scroll', this.scroll);
+
+      this.veda.play();
     }
   }, {
     key: 'render',

@@ -8,6 +8,9 @@ injectGlobal`
     from { opacity: 0; }
     to   { opacity: .5; }
   }
+  video {
+    display: none !important;
+  }
 `;
 
 const Wrapper  = styled.div`
@@ -29,11 +32,6 @@ const Canvas = styled.canvas`
 `;
 
 export default class Shader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.scroll = 0;
-  }
-
   componentDidMount() {
     if (!window) { return; }
 
@@ -42,20 +40,23 @@ export default class Shader extends React.Component {
     this.veda.setCanvas(this.canvas);
     this.veda.loadTexture('image', '/static/images/kii.png');
     this.veda.loadFragmentShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
-    this.veda.setUniform('scroll', 'f', this.getScroll());
+
+    this.resize();
+    this.scroll();
+    window.addEventListener('resize', this.resize);
+    window.addEventListener('scroll', this.scroll);
+
     this.veda.play();
-
-    this.update();
   }
 
-  update = (e) => {
-    this.veda.setUniform('scroll', 'f', this.getScroll());
-    requestAnimationFrame(this.update);
+  resize = () => {
+    this.veda.resize(window.innerWidth, window.innerHeight)
   }
 
-  getScroll = () => {
+  scroll = () => {
     if (!window) { return 0; }
-    return window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    const scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    this.veda.setUniform('scroll', 'f', scroll);
   }
 
   setCanvas = el => this.canvas = el;
