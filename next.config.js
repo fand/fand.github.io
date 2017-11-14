@@ -1,12 +1,15 @@
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+
+
 module.exports = {
   webpack(config) {
     // Workaround for build error caused by UglifyJs.
     // See https://github.com/zeit/next.js/issues/1253
-    config.plugins = config.plugins.filter(plugin => {
+    config.plugins = config.plugins.map(plugin => {
       if (plugin.constructor.name === 'UglifyJsPlugin') {
-        return false;
+        return new MinifyPlugin();
       }
-      return true;
+      return plugin;
     });
 
     const rulesExceptBabelLoaderRule = config.module.rules.slice(0, -1);

@@ -6,6 +6,7 @@
   "author": "fand <fand@gmork.in>",
   "license": "MIT",
   "dependencies": {
+    "babel-minify-webpack-plugin": "^0.2.0",
     "is-video": "^1.0.1",
     "jump.js": "^1.0.2",
     "lozad": "^1.0.9",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export -o docs && rm -rf .next _next docs/static && mv docs/* . && rm -rf docs",
+    "build": "NODE_ENV=production next build && next export -o docs && rm -rf .next _next docs/static && mv docs/* . && rm -rf docs",
     "precommit": "npm run build && git add ."
   },
   "devDependencies": {
