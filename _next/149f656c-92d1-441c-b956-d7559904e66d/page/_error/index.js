@@ -1,7 +1,7 @@
 
-          window.__NEXT_REGISTER_PAGE('/', function() {
+          window.__NEXT_REGISTER_PAGE('/_error', function() {
             var comp = module.exports =
-webpackJsonp([2],[],[210]);
+webpackJsonp([3],[],[241]);
             return { page: comp.default }
           })
         

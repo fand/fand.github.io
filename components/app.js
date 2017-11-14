@@ -3,7 +3,7 @@ import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
 import Shader from './shader';
 
-const profile = require('./profile.md');
+import profile from './profile.md';
 
 injectGlobal`
   body {

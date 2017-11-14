@@ -431,7 +431,7 @@ babel-inline-import-loader@^0.0.5:
     babel-types "^6.25.0"
     babylon "^6.17.4"
 
-babel-loader@7.1.2:
+babel-loader@7.1.2, babel-loader@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.2.tgz#f6cbe122710f1aa2af4d881c6d5b54358ca24126"
   dependencies:
@@ -4637,6 +4637,13 @@ validate-npm-package-name@^3.0.0:
   resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-3.0.0.tgz#5fa912d81eb7d0c74afc140de7317f0ca7df437e"
   dependencies:
     builtins "^1.0.3"
+
+vedajs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vedajs/-/vedajs-0.3.0.tgz#b7c3be51c96b2fc14a9915a488ac5dc131dd8a95"
+  dependencies:
+    is-video "^1.0.1"
+    three "^0.87.1"
 
 verror@1.10.0:
   version "1.10.0"
