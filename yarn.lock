@@ -4827,9 +4827,9 @@ validate-npm-package-name@^3.0.0:
   dependencies:
     builtins "^1.0.3"
 
-vedajs@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/vedajs/-/vedajs-0.3.0.tgz#b7c3be51c96b2fc14a9915a488ac5dc131dd8a95"
+vedajs@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/vedajs/-/vedajs-0.3.1.tgz#47df137dcb5ac9bfe44021590b70ef7d5eebcd15"
   dependencies:
     is-video "^1.0.1"
     three "^0.87.1"
