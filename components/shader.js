@@ -8,9 +8,9 @@ injectGlobal`
     from { opacity: 0; }
     to   { opacity: .5; }
   }
-  video {
+  ${'' /* video {
     display: none !important;
-  }
+  } */}
 `;
 
 const Wrapper  = styled.div`

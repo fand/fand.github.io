@@ -13,12 +13,32 @@ Web Frontend Engineer.
 
 _\#Kyoto \#Japan
 \#JavaScript \#React \#WebGL \#GLSL
-\#Guitar \#VJ \#LiveCoding_
+\#VJ \#LiveCoding \#Guitar_
 
 
 ## Works
 
-[Apps](#apps) / [CLI](#cli) / [Libs](#libs)
+[VJ](#vj) / [Apps](#apps) / [CLI](#cli) / [Libs](#libs)
+
+
+### VJ
+
+Here are my VJ / GLSL works:
+
+<video src="/static/images/vj01.mp4" poster="/static/images/vj01.jpg"></video>
+<video src="/static/images/vj02.mp4" poster="/static/images/vj02.jpg"></video>
+<video src="/static/images/vj03.mp4" poster="/static/images/vj03.jpg"></video>
+<video src="/static/images/vj04.mp4" poster="/static/images/vj04.jpg"></video>
+<video src="/static/images/vj05.mp4" poster="/static/images/vj05.jpg"></video>
+<video src="/static/images/vj06.mp4" poster="/static/images/vj06.jpg"></video>
+<video src="/static/images/vj07.mp4" poster="/static/images/vj07.jpg"></video>
+
+See my twitter moment for more info.
+<div align="center">
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">モーメント作った⚡️ &quot;Amagi VJ / GLSL Works&quot;<a href="https://t.co/SxPJJjbXdV">https://t.co/SxPJJjbXdV</a></p>&mdash; amagi (@amagitakayosi) <a href="https://twitter.com/amagitakayosi/status/929990820328902656?ref_src=twsrc%5Etfw">2017年11月13日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 
 ### Apps
 
@@ -33,6 +53,13 @@ VJ / Live Coding environment for Atom.
 Technically it's a GLSL environment like [Shadertoy](https://www.shadertoy.com/).
 You can load images / videos and take audio / MIDI inputs.
 It also supports webcam inputs, events from keyboard, and gamepads.
+
+
+#### post-internet
+
+![](0)
+
+A Chrome extension to post-process the internet.
 
 
 #### evil
@@ -145,6 +172,15 @@ This is my first web app.
 
 ### CLI
 
+#### kao
+
+[![](https://user-images.githubusercontent.com/1403842/32220865-a389a802-be76-11e7-83b4-eee313cb7ce0.gif)](https://github.com/fand/kao)
+
+[<i class="fa fa-github"></i> GitHub](https://github.com/fand/kao)
+
+CLI Kaomoji(顔文字) Searcher.
+
+
 #### aozora
 
 [![](https://cloud.githubusercontent.com/assets/1403842/13048632/90487684-d42a-11e5-8a89-e0a3b1cb05a2.gif)](https://github.com/fand/aozora)
@@ -157,7 +193,7 @@ CLI client for [Aozora Bunko (青空文庫)](http://www.aozora.gr.jp/).
 
 #### irasutoya
 
-[![](https://camo.githubusercontent.com/fdd35b77d3949b5e38389c0021d93b05bed44f8d/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f435a346f646a7a55734145524238352e706e673a6c61726765)](https://github.com/fand/irasutoya)
+[![](/static/images/irasutoya.png)](https://github.com/fand/irasutoya)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/irasutoya)
 
@@ -183,7 +219,7 @@ Its website is built Scala.js, React and ScalaCSS.
 
 #### circle-text
 
-[![](https://cloud.githubusercontent.com/assets/1403842/19378156/12137ee8-9226-11e6-96f5-6f2f5a1cea78.png)](https://github.com/fand/circle-text)
+[![](/static/images/circle-text.png)](https://github.com/fand/circle-text)
 
 [<i class="fa fa-github"></i> GitHub](https://github.com/fand/circle-text)
 
@@ -220,7 +256,9 @@ See [SpeakerDeck](https://speakerdeck.com/fand).
 
 ### Events
 
-[![](/static/images/kyotojs.png)](https://kyoto.js.org/)
+<a href="https://kyoto.js.org/">
+  <img src="/static/images/kyotojs.png" style="min-height: auto;"/>
+</a>
 
 I'm the organizer of [Kyoto.js](https://kyoto.js.org/).
 See connpass for past events.

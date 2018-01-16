@@ -24,10 +24,11 @@ const Wrapper = styled.section`
     margin: 50px;
   }
 
-  img, iframe {
-    width: 420px;
-    max-width: 100%;
-    max-height: 360px;
+  img, iframe, video {
+    width: 480px;
+    min-height: 180px;
+    max-width: 90vw;
+    max-height: 300px;
   }
 
   p {
