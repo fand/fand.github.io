@@ -12,6 +12,11 @@ module.exports = {
       return plugin;
     });
 
+
+    config.node = {
+      fs: 'empty',
+    };
+
     const rulesExceptBabelLoaderRule = config.module.rules.slice(0, -1);
     const babelLoaderRule = config.module.rules.slice(-1)[0];
 
