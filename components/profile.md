@@ -57,7 +57,9 @@ It also supports webcam inputs, events from keyboard, and gamepads.
 
 #### post-internet
 
-![](0)
+<a href="https://chrome.google.com/webstore/detail/post-internet/daifjhimejfimjhjakfbpeombkmamkmn">
+<video src="/static/images/post.mp4" poster="/static/images/post.jpg"></video>
+</a>
 
 A Chrome extension to post-process the internet.
 
