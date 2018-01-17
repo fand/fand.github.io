@@ -25,13 +25,13 @@ _\#Kyoto \#Japan
 
 Here are my VJ / GLSL works:
 
-<video src="/static/images/vj01.mp4" poster="/static/images/vj01.jpg"></video>
-<video src="/static/images/vj02.mp4" poster="/static/images/vj02.jpg"></video>
-<video src="/static/images/vj03.mp4" poster="/static/images/vj03.jpg"></video>
-<video src="/static/images/vj04.mp4" poster="/static/images/vj04.jpg"></video>
-<video src="/static/images/vj05.mp4" poster="/static/images/vj05.jpg"></video>
-<video src="/static/images/vj06.mp4" poster="/static/images/vj06.jpg"></video>
-<video src="/static/images/vj07.mp4" poster="/static/images/vj07.jpg"></video>
+<video src="/static/images/vj01.mp4" poster="/static/images/vj01.jpg" preload="none"></video>
+<video src="/static/images/vj02.mp4" poster="/static/images/vj02.jpg" preload="none"></video>
+<video src="/static/images/vj03.mp4" poster="/static/images/vj03.jpg" preload="none"></video>
+<video src="/static/images/vj04.mp4" poster="/static/images/vj04.jpg" preload="none"></video>
+<video src="/static/images/vj05.mp4" poster="/static/images/vj05.jpg" preload="none"></video>
+<video src="/static/images/vj06.mp4" poster="/static/images/vj06.jpg" preload="none"></video>
+<video src="/static/images/vj07.mp4" poster="/static/images/vj07.jpg" preload="none"></video>
 
 See my twitter moment for more info.
 <div align="center">
@@ -58,7 +58,7 @@ It also supports webcam inputs, events from keyboard, and gamepads.
 #### post-internet
 
 <a href="https://chrome.google.com/webstore/detail/post-internet/daifjhimejfimjhjakfbpeombkmamkmn">
-<video src="/static/images/post.mp4" poster="/static/images/post.jpg"></video>
+<video src="/static/images/post.mp4" poster="/static/images/post.jpg" preload="none"></video>
 </a>
 
 A Chrome extension to post-process the internet.
