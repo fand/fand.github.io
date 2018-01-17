@@ -85,11 +85,16 @@ const Footer = styled.footer`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 120px;
     height: 120px;
+
+    transition: transform 0.5s;
+    transform: translate(-50%, -50%) rotate(0deg);
+    &:hover {
+      transform: translate(-50%, -50%) rotate(1080deg);
+    }
   }
-  a {
+  span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -113,15 +118,25 @@ marked.setOptions({
 });
 const innerHtml = { __html: marked(profile, { renderer }) }
 
+const scrollToTop = () => {
+  const scroll = () => {
+    if (typeof window === 'undefined' || window.scrollY === 0) { return; }
+    window.scrollTo(0, window.scrollY * 0.9);
+    requestAnimationFrame(scroll);
+  }
+
+  scroll();
+};
+
 export default () => (
   <div>
     <Shader/>
     <Wrapper>
       <div dangerouslySetInnerHTML={innerHtml}/>
     </Wrapper>
-    <Footer>
+    <Footer onClick={scrollToTop}>
       <img src="/static/images/vertigo.png" width="120"/>
-      <a href="/">gmork.in</a>
+      <span>gmork.in</span>
     </Footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   </div>
