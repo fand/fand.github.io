@@ -8,8 +8,12 @@ import profile from './profile.md';
 injectGlobal`
   body {
     line-height: 2em;
-    font-family: serif;
+    font-family: "Open Sans", sans-serif;
     text-align: center;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
   }
 `;
 
@@ -102,6 +106,29 @@ const Footer = styled.footer`
   }
 `;
 
+const Header = styled.header`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  img {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    font-size: 4em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
+`;
+
 const renderer = new marked.Renderer();
 renderer.image = function(href, title, text) {
   var out = '<img class="lozad" data-src="' + href + '" alt="' + text + '"';
@@ -131,6 +158,10 @@ const scrollToTop = () => {
 export default () => (
   <div>
     <Shader/>
+    <Header>
+      <img src="/static/images/vertigo.png" width="200"/>
+      <h1>AMAGI</h1>
+    </Header>
     <Wrapper>
       <div dangerouslySetInnerHTML={innerHtml}/>
     </Wrapper>

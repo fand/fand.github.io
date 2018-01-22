@@ -1,8 +1,4 @@
-<img class="vertigo" src="/static/images/vertigo.png"/>
-
-# Takayosi Amagi
 [Profile](#profile) / [Works](#works) / [Media](#media)
-
 
 ## Profile
 

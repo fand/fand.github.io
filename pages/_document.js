@@ -42,6 +42,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff"/>
           {this.props.styleTags}
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700"/>
         </Head>
         <body>
           <Main />
