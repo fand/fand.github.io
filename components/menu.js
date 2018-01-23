@@ -28,6 +28,9 @@ const Wrapper = styled.nav`
     border: 15px solid transparent;
     transition: .4s .8s;
     transform: skew(-45deg);
+    @media (max-width: 768px) {
+      transition: none;
+    }
   }
   a:before {
     content: '';
@@ -50,6 +53,10 @@ const Wrapper = styled.nav`
     top: 100px;
     transition: .5s .5s;
     line-height: 1.6em;
+
+    @media (max-width: 768px) {
+      transition: none;
+    }
   }
 
   span:before {

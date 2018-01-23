@@ -48,6 +48,15 @@ const Wrapper = styled.div`
       rgba(0, 0, 0, 0.8) 96.74%, #000 96.75%
     ) 100% 100% / ${p => p.size - 12}px ${p => p.size - 12}px;
     filter: drop-shadow(4px 4px) drop-shadow(-4px -4px);
+
+    @media (max-width: 768px) {
+      background-position: 0;
+      filter: none;
+      background: rgba(0,0,0,0.8);
+    }
+  }
+  @media (max-width: 768px) {
+    transition: .3s;
   }
 `;
 
@@ -63,6 +72,9 @@ const Inner = styled.div`
     opacity: 1;
     color: white;
     transition: .3s all .5s;
+    @media (max-width: 768px) {
+      transition: none;
+    }
   }
 `;
 
@@ -78,6 +90,9 @@ const CloseButton = styled.div`
   background:
    linear-gradient(45deg, transparent 48%, white 48.1%, silver 51.9%, transparent 52%),
    linear-gradient(-45deg, transparent 48%, white 48.1%, silver 51.9%, transparent 52%);
+ @media (max-width: 768px) {
+   transition: none;
+ }
 `;
 
 export default class Hamburger extends React.PureComponent {
