@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   left: 0;
   width: 100%;
   height: ${HEIGHT}px;
-  background: rgba(157, 250, 251, 0.3);
+  background: rgba(157, 250, 251, 0.6);
 `;
 
 const Logo = styled.div`
@@ -38,7 +38,7 @@ export default class Header extends React.Component {
           <img className="icon" src="/static/images/vertigo.png"/>
           <h1 className="logo">AMAGI</h1>
         </Logo>
-        <Hamburger size={HEIGHT} onClick={this.props.showMenu}/>
+        <Hamburger size={HEIGHT}/>
       </Wrapper>
     );
   }

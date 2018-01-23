@@ -115,7 +115,7 @@ export default class Menu extends React.PureComponent {
           <li><a onClick={this.move} href="#profile"><span>Profile</span></a></li>
           <li><a onClick={this.move} href="#vj"><span>VJ Works</span></a></li>
           <li><a onClick={this.move} href="#apps"><span>Apps</span></a></li>
-          <li><a onClick={this.move} href="#blog"><span>Blog</span></a></li>
+          <li><a onClick={this.move} href="#media"><span>Media</span></a></li>
         </ul>
       </Wrapper>
     );

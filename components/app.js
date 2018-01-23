@@ -1,6 +1,7 @@
 import React from 'react';
 import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
+import VisibilitySensor from 'react-visibility-sensor';
 import Shader from './shader';
 import Header from './header';
 import profile from './profile.md';
@@ -57,10 +58,10 @@ const Wrapper = styled.section`
   }
   h1 {
     font-size: 1.8em;
-    margin: 30px auto 30px;
+    padding: 30px 0 30px;
   }
   h2 {
-    margin: 90px auto 40px;
+    padding: 90px 0 40px;
     &:before, &:after {
       color: #999;
       content: '――――';
@@ -69,11 +70,11 @@ const Wrapper = styled.section`
     }
   }
   h3 {
-    margin: 60px auto 20px;
+    padding: 60px 0 20px;
     font-size: 1.17em;
   }
   h4 {
-    margin: 80px auto 20px;
+    padding: 80px 0 20px;
     font-size: 1.12em;
   }
   h3 + h4 {
@@ -110,6 +111,7 @@ const Hero = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
+  margin-bottom: -20vh;
   img {
     position: absolute;
     top: calc(50% - 50px);
@@ -130,6 +132,11 @@ const Hero = styled.div`
     font-weight: 600;
   }
 `;
+
+const HeaderWrapper = styled.div`
+  transition: opacity 0.3s;
+  opacity: ${p => p.visible ? 1 : 0};
+`
 
 const renderer = new marked.Renderer();
 renderer.image = function(href, title, text) {
@@ -159,19 +166,22 @@ const scrollToTop = () => {
 
 export default class App extends React.Component {
   state = {
-    isMenuVisible: false,
     isHeaderVisible: false,
   }
 
-  showMenu = () => {
-    this.setState({ isMenuVisible: !this.state.isMenuVisible });
+  onChangeHero = isVisible => {
+    this.setState({ isHeaderVisible: !isVisible });
   }
 
   render() {
+    console.log(this.state.isHeaderVisible);
     return (
       <div>
-        <Header showMenu={this.showMenu} isMenuVisible={this.state.isMenuVisible}/>
+        <HeaderWrapper visible={this.state.isHeaderVisible}>
+          <Header/>
+        </HeaderWrapper>
         <Hero>
+          <VisibilitySensor onChange={this.onChangeHero}/>
           <img src="/static/images/vertigo.png" width="200"/>
           <h1>AMAGI</h1>
         </Hero>
