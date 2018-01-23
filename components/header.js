@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hamburger from './hamburger';
 import scrollToTop from './scroll-to-top';
-
-const HEIGHT = 48;
+import { HEADER_HEIGHT } from './constants';
 
 const Wrapper = styled.section`
   position: fixed;
@@ -11,7 +9,7 @@ const Wrapper = styled.section`
   top: 0;
   left: 0;
   width: 100%;
-  height: ${HEIGHT}px;
+  height: ${HEADER_HEIGHT}px;
   background: rgba(157, 250, 251, 0.6);
 `;
 
@@ -20,13 +18,13 @@ const Logo = styled.div`
   margin: auto;
   width: 170px;
   .icon {
-    width: ${HEIGHT}px;
-    height: ${HEIGHT}px;
+    width: ${HEADER_HEIGHT}px;
+    height: ${HEADER_HEIGHT}px;
     padding: 6px;
     margin-right: -2px;
   }
   h1 {
-    line-height: ${HEIGHT - 8}px;
+    line-height: ${HEADER_HEIGHT - 8}px;
     margin: 4px;
   }
 `;
@@ -39,7 +37,6 @@ export default class Header extends React.Component {
           <img className="icon" src="/static/images/vertigo.png"/>
           <h1 className="logo">AMAGI</h1>
         </Logo>
-        <Hamburger size={HEIGHT}/>
       </Wrapper>
     );
   }

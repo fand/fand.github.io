@@ -25,9 +25,9 @@ const Wrapper = styled.nav`
     position: absolute;
     width: 0;
     height: 0;
-    border: 15px solid transparent;
+    border: 20px solid transparent;
     transition: .4s .8s;
-    transform: skew(-45deg);
+    transform: skew(-63deg);
     @media (max-width: 768px) {
       transition: none;
     }
@@ -61,13 +61,13 @@ const Wrapper = styled.nav`
 
   span:before {
     top: 0;
-    left: 80px;
-    border-top: 15px solid white;
+    left: 180px;
+    border-top: 10px solid white;
   }
   span:after {
     bottom: 2px;
-    right: 80px;
-    border-bottom: 15px solid white;
+    right: 180px;
+    border-bottom: 10px solid white;
   }
 
   &[open] {
@@ -79,22 +79,22 @@ const Wrapper = styled.nav`
       top: 0;
     }
     span:before {
-      left: -15px;
+      left: -30px;
     }
     span:after {
-      right: -15px;
+      right: -30px;
     }
   }
   @keyframes stripe {
     from { background-position: 0px; }
-    to { background-position: -100px; }
+    to { background-position: 0px -9999px; }
   }
   a:hover {
     background: repeating-linear-gradient(
-      -30deg,
-      #000 0px, #000 5px, #444 5px, #444 8px
+      -18.5deg,
+      #000 0px, #000 5px, #333 5px, #333 7px
     );
-    animation: stripe 3s linear infinite;
+    animation: stripe 300s linear infinite;
   }
 `;
 

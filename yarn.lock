@@ -3158,9 +3158,9 @@ lowercase-keys@1.0.0, lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
 
-lozad@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/lozad/-/lozad-1.0.9.tgz#9cdd81d56435f524a1160f293d7a2a899116d550"
+lozad@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/lozad/-/lozad-1.1.0.tgz#c4c2cf0c7f40b391aaa86d08bfa6658117fe1e48"
 
 lru-cache@^4.0.1:
   version "4.1.1"
@@ -4676,9 +4676,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-styled-components@^2.1.2:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.0.tgz#086d0fd483d54638837fca3ea546a030b94adf75"
+styled-components@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.0.2.tgz#dbcd66ee84d444ee4332a7f74027e8a675191593"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"

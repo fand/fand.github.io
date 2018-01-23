@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import Menu from './menu';
 
 const Wrapper = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: ${p => p.size - 12}px;
-  height: ${p => p.size - 12}px;
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  width: ${p => p.size - 20}px;
+  height: ${p => p.size - 20}px;
   cursor: pointer;
-  margin: 6px;
-  transition: width 0.1s 0.2s, height 0.2s, background 0.3s, filter 0.8s 0.6s;
+  transition: width 0.1s 0.2s, height 0.2s, background 0.3s, filter 0.8s 0.4s;
   z-index: 10;
   overflow: hidden;
 
@@ -24,16 +23,16 @@ const Wrapper = styled.div`
     transparent 71.74%, #333 71.75%,
     #333 78.25%, transparent 78.26%,
     transparent 94.74%, #333 94.75%
-  ) 100% 100% / ${p => p.size - 12}px ${p => p.size - 12}px;
+  ) 100% 100% / ${p => p.size - 20}px ${p => p.size - 20}px;
   &:hover {
-    background-position: -${p => (p.size - 12) * 3}px;
+    background-position: -${p => (p.size - 20) * 3}px;
   }
 
   &[open] {
     overflow: scroll;
-    background-position: -${p => (p.size - 12) * 3}px;
-    width: 100vw;
-    height: 100vh;
+    background-position: -${p => (p.size - 20) * 3}px;
+    width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
     margin: 0;
     cursor: default;
     background: linear-gradient(
@@ -46,8 +45,9 @@ const Wrapper = styled.div`
       rgba(0, 0, 0, 0.8) 71.74%, #000 71.75%,
       #000 78.25%, rgba(0, 0, 0, 0.8) 78.26%,
       rgba(0, 0, 0, 0.8) 96.74%, #000 96.75%
-    ) 100% 100% / ${p => p.size - 12}px ${p => p.size - 12}px;
-    filter: drop-shadow(4px 4px) drop-shadow(-4px -4px);
+    ) 100% 100% / ${p => p.size - 20}px ${p => p.size - 20}px;
+    filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.4))
+      drop-shadow(-4px -4px rgba(0, 0, 0, 0.4));
 
     @media (max-width: 768px) {
       background-position: 0;
@@ -85,7 +85,7 @@ const CloseButton = styled.div`
   width: ${p => p.size - 24}px;
   height: ${p => p.size - 24}px;
   cursor: pointer;
-  margin: 12px;
+  margin: 24px;
   transition: 0.4s;
   background:
    linear-gradient(45deg, transparent 48%, white 48.1%, silver 51.9%, transparent 52%),

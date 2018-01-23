@@ -4,8 +4,10 @@ import styled, { injectGlobal } from 'styled-components';
 import VisibilitySensor from 'react-visibility-sensor';
 import Shader from './shader';
 import Header from './header';
+import Hamburger from './hamburger';
 import profile from './profile.md';
 import scrollToTop from './scroll-to-top';
+import { HEADER_HEIGHT } from './constants';
 
 injectGlobal`
   body {
@@ -170,6 +172,7 @@ export default class App extends React.Component {
         <HeaderWrapper visible={this.state.isHeaderVisible}>
           <Header/>
         </HeaderWrapper>
+        <Hamburger size={HEADER_HEIGHT}/>
         <Hero>
           <VisibilitySensor onChange={this.onChangeHero}/>
           <img src="/static/images/vertigo.png" width="200"/>
