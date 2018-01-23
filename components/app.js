@@ -5,6 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Shader from './shader';
 import Header from './header';
 import profile from './profile.md';
+import scrollToTop from './scroll-to-top';
 
 injectGlobal`
   body {
@@ -154,16 +155,6 @@ marked.setOptions({
 });
 const innerHtml = { __html: marked(profile, { renderer }) }
 
-const scrollToTop = () => {
-  const scroll = () => {
-    if (typeof window === 'undefined' || window.scrollY === 0) { return; }
-    window.scrollTo(0, window.scrollY * 0.9);
-    requestAnimationFrame(scroll);
-  }
-
-  scroll();
-};
-
 export default class App extends React.Component {
   state = {
     isHeaderVisible: false,
@@ -174,7 +165,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.isHeaderVisible);
     return (
       <div>
         <HeaderWrapper visible={this.state.isHeaderVisible}>

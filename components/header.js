@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hamburger from './hamburger';
+import scrollToTop from './scroll-to-top';
 
 const HEIGHT = 48;
 
@@ -34,7 +35,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Logo>
+        <Logo onClick={scrollToTop}>
           <img className="icon" src="/static/images/vertigo.png"/>
           <h1 className="logo">AMAGI</h1>
         </Logo>

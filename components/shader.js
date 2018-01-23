@@ -3,6 +3,15 @@ import styled, { injectGlobal } from 'styled-components';
 import shaderPc from './shaders/pc.frag';
 import shaderMobile from './shaders/mobile.frag';
 
+// for Safari
+if (
+  typeof window !== 'undefined' &&
+  typeof window.AudioContext === 'undefined' &&
+  typeof window.webkitAudioContext !== 'undefined'
+) {
+  window.AudioContext = window.webkitAudioContext
+}
+
 injectGlobal`
   @keyframes disolve {
     from { opacity: 0; }
