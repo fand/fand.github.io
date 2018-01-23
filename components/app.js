@@ -2,7 +2,7 @@ import React from 'react';
 import marked from 'marked';
 import styled, { injectGlobal } from 'styled-components';
 import Shader from './shader';
-
+import Header from './header';
 import profile from './profile.md';
 
 injectGlobal`
@@ -106,7 +106,7 @@ const Footer = styled.footer`
   }
 `;
 
-const Header = styled.header`
+const Hero = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -116,14 +116,16 @@ const Header = styled.header`
     left: 50%;
     width: 200px;
     height: 200px;
+    max-width: 40vw;
+    max-height: 40vw;
     transform: translate(-50%, -50%);
   }
   h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50px);
-    font-size: 4em;
+    transform: translate(-50%, calc(5vw));
+    font-size: 3em;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
   }
@@ -155,20 +157,34 @@ const scrollToTop = () => {
   scroll();
 };
 
-export default () => (
-  <div>
-    <Shader/>
-    <Header>
-      <img src="/static/images/vertigo.png" width="200"/>
-      <h1>AMAGI</h1>
-    </Header>
-    <Wrapper>
-      <div dangerouslySetInnerHTML={innerHtml}/>
-    </Wrapper>
-    <Footer onClick={scrollToTop}>
-      <img src="/static/images/vertigo.png" width="120"/>
-      <span>gmork.in</span>
-    </Footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-  </div>
-);
+export default class App extends React.Component {
+  state = {
+    isMenuVisible: false,
+    isHeaderVisible: false,
+  }
+
+  showMenu = () => {
+    this.setState({ isMenuVisible: !this.state.isMenuVisible });
+  }
+
+  render() {
+    return (
+      <div>
+        <Header showMenu={this.showMenu} isMenuVisible={this.state.isMenuVisible}/>
+        <Hero>
+          <img src="/static/images/vertigo.png" width="200"/>
+          <h1>AMAGI</h1>
+        </Hero>
+        <Wrapper>
+          <div dangerouslySetInnerHTML={innerHtml}/>
+        </Wrapper>
+        <Footer onClick={scrollToTop}>
+          <img src="/static/images/vertigo.png" width="120"/>
+          <span>gmork.in</span>
+        </Footer>
+        <Shader/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+      </div>
+    );
+  }
+}

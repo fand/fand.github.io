@@ -1,5 +1,3 @@
-[Profile](#profile) / [Works](#works) / [Media](#media)
-
 ## Profile
 
 Web Frontend Engineer.
