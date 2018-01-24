@@ -7,6 +7,7 @@ export default class Index extends React.Component {
     observer.observe();
 
     document.querySelectorAll('video').forEach(e => {
+      e.loop = true;
       e.addEventListener('mousemove', () => e.play());
       e.addEventListener('mouseleave', () => e.pause());
     });
