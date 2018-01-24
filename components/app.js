@@ -21,6 +21,20 @@ injectGlobal`
   }
 `;
 
+const AppWrapper = styled.main`
+  @keyframes disolve {
+    from {
+      opacity: 0;
+      background: black;
+    }
+    to {
+      opacity: 1;
+      background: transparent;
+    }
+  }
+  animation: disolve 1s;
+`;
+
 const Wrapper = styled.section`
   width: 640px;
   max-width: 90%;
@@ -140,22 +154,11 @@ const HeaderWrapper = styled.div`
   transition: opacity 0.3s;
   opacity: ${p => p.visible ? 1 : 0};
 `
-
-const renderer = new marked.Renderer();
-renderer.image = function(href, title, text) {
-  var out = '<img class="lozad" data-src="' + href + '" alt="' + text + '"';
-  if (title) {
-    out += ' title="' + title + '"';
-  }
-  out += this.options.xhtml ? '/>' : '>';
-  return out;
-};
-
 marked.setOptions({
   gfm: true,
   breaks: true,
 });
-const innerHtml = { __html: marked(profile, { renderer }) }
+const innerHtml = { __html: marked(profile) }
 
 export default class App extends React.Component {
   state = {
@@ -168,7 +171,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <AppWrapper>
         <HeaderWrapper visible={this.state.isHeaderVisible}>
           <Header/>
         </HeaderWrapper>
@@ -186,8 +189,7 @@ export default class App extends React.Component {
           <span>gmork.in</span>
         </Footer>
         <Shader/>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-      </div>
+      </AppWrapper>
     );
   }
 }

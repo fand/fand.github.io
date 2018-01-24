@@ -12,13 +12,6 @@ if (
   window.AudioContext = window.webkitAudioContext
 }
 
-injectGlobal`
-  @keyframes disolve {
-    from { opacity: 0; }
-    to   { opacity: .5; }
-  }
-`;
-
 const Wrapper  = styled.div`
   background: #fff;
   opacity: 1;
@@ -31,8 +24,7 @@ const Canvas = styled.canvas`
   height: 100%;
   width: 100%;
   z-index: -2;
-  opacity: 0;
-  animation: disolve 3s linear 1s 1;
+  opacity: 0.4;
   animation-fill-mode: forwards;
   background: #fff;
 `;
