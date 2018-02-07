@@ -55,6 +55,8 @@ const Wrapper = styled.section`
 
   p {
     margin: 1em auto;
+    text-shadow: 0 0 2px white;
+    font-weight: 600;
   }
 
   code {
@@ -62,11 +64,10 @@ const Wrapper = styled.section`
   }
 
   a, a:visited {
-    color: #059;
+    color: #F00;
     text-decoration: none;
   }
   a:hover {
-    opacity: 0.5;
     text-decoration: underline;
   }
 
@@ -74,25 +75,26 @@ const Wrapper = styled.section`
     text-align: center;
   }
   h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     padding: 30px 0 30px;
   }
   h2 {
     padding: 90px 0 40px;
+    font-size: 1.9em;
     &:before, &:after {
-      color: #999;
-      content: '――――';
+      color: #000;
+      content: '―――';
       letter-spacing: -0.2em;
       margin: 0 20px 0 10px;
     }
   }
   h3 {
     padding: 60px 0 20px;
-    font-size: 1.17em;
+    font-size: 1.8em;
   }
   h4 {
     padding: 80px 0 20px;
-    font-size: 1.12em;
+    font-size: 1.7em;
   }
   h3 + h4 {
     margin-top: 20px;
@@ -188,7 +190,7 @@ export default class App extends React.Component {
           <img src="/static/images/vertigo.png" width="120"/>
           <span>gmork.in</span>
         </Footer>
-        <Shader/>
+        <Shader visible={!this.state.isHeaderVisible}/>
       </AppWrapper>
     );
   }

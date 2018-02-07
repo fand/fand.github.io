@@ -10,7 +10,7 @@ const Wrapper = styled.section`
   left: 0;
   width: 100%;
   height: ${HEADER_HEIGHT}px;
-  background: rgba(157, 250, 251, 0.6);
+  background: #9FF;
 `;
 
 const Logo = styled.div`
@@ -26,6 +26,11 @@ const Logo = styled.div`
   h1 {
     line-height: ${HEADER_HEIGHT - 8}px;
     margin: 4px;
+  }
+
+  cursor: pointer;
+  &:hover {
+    filter: drop-shadow(2px 0 red);
   }
 `;
 
