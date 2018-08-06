@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
-import shaderPc from './shaders/pc.frag';
-import shaderMobile from './shaders/mobile.frag';
+import fs from './shaders/main.frag';
+import vs from './shaders/main.vert';
 
 // for Safari
 if (
@@ -30,9 +30,9 @@ const Canvas = styled.canvas`
   height: 100%;
   width: 100%;
   z-index: -2;
-  opacity: 0.4;
+  ${'' /* opacity: 0.4; */}
   animation-fill-mode: forwards;
-  background: #fff;
+  ${'' /* background: #fff; */}
 `;
 
 const Video = styled.video`
@@ -57,18 +57,17 @@ export default class Shader extends React.Component {
   componentDidMount() {
     if (!window) { return; }
 
-    // const Veda = require('vedajs');
-    // this.veda = new Veda();
-    // this.veda.setCanvas(this.canvas);
-    // this.veda.loadTexture('image', '/static/images/kii.png');
-    // this.veda.loadFragmentShader(window.innerWidth > 770 ? shaderPc : shaderMobile);
-    //
-    // this.resize();
-    // this.scroll();
-    // window.addEventListener('resize', this.resize);
-    // window.addEventListener('scroll', this.scroll);
-    //
-    // this.veda.play();
+    const Veda = require('vedajs').default;
+    this.veda = new Veda({ vertexCount: 300, pixelRatio: 0.5 });
+    this.veda.setCanvas(this.canvas);
+    this.veda.loadShader([{ vs, TARGET: "renderBuffer" }, { fs }]);
+
+    this.resize();
+    this.scroll();
+    window.addEventListener('resize', this.resize);
+    window.addEventListener('scroll', this.scroll);
+
+    this.veda.play();
   }
 
   resize = () => {
@@ -86,11 +85,7 @@ export default class Shader extends React.Component {
   render() {
     return (
       <Wrapper>
-        {/* <Canvas innerRef={this.setCanvas}/> */}
-        <Video autoPlay playsInline loop visible={this.props.visible}>
-          <source src="/static/videos/m8.mp4" type="video/mp4" media="all and (min-width: 768px)"/>
-          <source src="/static/videos/m8_1280.mp4" type="video/mp4" media="all and (max-width: 767px)"/>
-        </Video>
+        <Canvas innerRef={this.setCanvas}/>
       </Wrapper>
     );
   }
