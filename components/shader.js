@@ -58,11 +58,9 @@ export default class Shader extends React.Component {
     if (!window) { return; }
 
     const Veda = require('vedajs').default;
-    this.veda = new Veda({});
+    this.veda = new Veda({ vertexCount: 300, pixelRatio: 0.5 });
     this.veda.setCanvas(this.canvas);
-    this.veda.setVertexCount(300);
-    this.veda.setVertexMode('TRIANGLES');
-    this.veda.loadShader({ vs, fs });
+    this.veda.loadShader([{ vs, TARGET: "renderBuffer" }, { fs }]);
 
     this.resize();
     this.scroll();

@@ -3,8 +3,6 @@ uniform float time;
 uniform vec2 resolution;
 uniform int	PASSINDEX;
 uniform sampler2D renderBuffer;
-uniform sampler2D backbuffer;
-varying vec4 v_color;
 
 // Util functions copied from http://glslsandbox.com/e#43153.1
 mat2 mm2(in float a){float c = cos(a), s = sin(a);return mat2(c,s,-s,c);}
@@ -38,18 +36,17 @@ float triNoise2d(in vec2 p, float spd)
 
 void main() {
     vec2 uv = gl_FragCoord.xy / resolution;
-    float t = mod(time * .0003, 10.);
+    float t = sin(time * .01) * 2.;
 
     gl_FragColor = texture2D(renderBuffer, uv);
-    // if (gl_FragColor.a > 0.01) {
+    if (gl_FragColor.a > 0.01) {
         gl_FragColor.r *= triNoise2d(uv * 1.3, t) * 10.1;
         gl_FragColor.g *= triNoise2d(uv * 1.9, t) * 10.2;
         gl_FragColor.b *= triNoise2d(uv * 1.9, t) * 10.3;
         gl_FragColor *= vec4(1,.1,.3,1);
-    // }
-    // else {
-    //   gl_FragColor = vec4(0,1,1,1);
-    // }
-    // gl_FragColor.rgba = vec4(1);
-    // gl_FragColor.a = 1.0;
+        gl_FragColor.a = 0.65;
+    }
+    else {
+      gl_FragColor = vec4(0.6,1,1,1);
+    }
 }
